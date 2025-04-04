@@ -11,10 +11,10 @@ const app = Vue.createApp({
     methods: {
         calculate() {
             switch(this.operation){
-            case '+': return this.result += this.number1 + this.number2;
-            case '-': return this.result += this.number1 - this.number2;
-            case '*': return this.result += this.number1 * this.number2;
-            case '/': return this.result += this.number1 / this.number2;
+            case '+': return this.result = this.number1 + this.number2;
+            case '-': return this.result = this.number1 - this.number2;
+            case '*': return this.result = this.number1 * this.number2;
+            case '/': return this.result = this.number1 / this.number2;
         }
     }
     },
