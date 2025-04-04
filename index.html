@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
     <title>Vue template</title>
 </head>
 <body>
     <div id="app">
-        <h1>{{ intro }}</h1>
+        <h1 class="h1">{{ intro }}</h1>
 
         <!--Vi bruger v-model.number for så bliver det automatisk til et tal og ikke en string-->
         <input type="number" placeholder="type a number" v-model.number="number1">
@@ -21,7 +23,7 @@
             <option value="/">/</option>
         </select>
         <input type="number" placeholder="type a number" v-model.number="number2">
-        <button type="button" @:click="calculate">=</button><br>
+        <button class="btn btn-danger" type="button" @:click="calculate">=</button><br>
         <h1>{{ result }}</h1>
     </div>
     
