@@ -10,6 +10,19 @@
 <body>
     <div id="app">
         <h1>{{ intro }}</h1>
+
+        <!--Vi bruger v-model.number for så bliver det automatisk til et tal og ikke en string-->
+        <input type="number" placeholder="type a number" v-model.number="number1">
+        <!--Vi binder operation variablen til select tagget og bruger værdien til at kører vores switch-->
+        <select name="operation" v-model="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" placeholder="type a number" v-model.number="number2">
+        <button type="button" @:click="calculate">=</button><br>
+        <h1>{{ result }}</h1>
     </div>
     
 
